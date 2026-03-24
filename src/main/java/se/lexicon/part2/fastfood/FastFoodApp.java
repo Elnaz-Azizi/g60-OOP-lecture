@@ -13,6 +13,7 @@ public class FastFoodApp {
 
         FoodItem largeFries = new Fries(Size.L, true, true);
         FoodItem smallFries = new Fries();
+        FoodItem PepperoniPizza = new Pizza(PizzaType.PEPPERONI);
 
         System.out.println(largeFries.getDescription());
         System.out.println("Tax: SEK " + largeFries.calculateTax());
@@ -26,6 +27,7 @@ public class FastFoodApp {
         order.addItem(burger);
         order.addItem(largeFries);
         order.addItem(smallFries);
+        order.addItem(PepperoniPizza);
         order.removeItem(smallFries);
         order.displayItems();
     }
