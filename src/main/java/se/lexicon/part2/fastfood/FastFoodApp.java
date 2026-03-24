@@ -1,9 +1,6 @@
 package se.lexicon.part2.fastfood;
 
-import se.lexicon.part2.fastfood.model.Burger;
-import se.lexicon.part2.fastfood.model.FoodItem;
-import se.lexicon.part2.fastfood.model.Fries;
-import se.lexicon.part2.fastfood.model.Size;
+import se.lexicon.part2.fastfood.model.*;
 
 public class FastFoodApp {
     static void main() {
@@ -22,5 +19,14 @@ public class FastFoodApp {
 
         System.out.println(smallFries.getDescription());
         System.out.println("Tax: SEK " + smallFries.calculateTax());
+
+        System.out.println("-------------------------------------");
+
+        FoodOrderItem order = new FoodOrderItem();
+        order.addItem(burger);
+        order.addItem(largeFries);
+        order.addItem(smallFries);
+        order.removeItem(smallFries);
+        order.displayItems();
     }
 }
